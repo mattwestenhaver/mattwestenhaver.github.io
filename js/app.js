@@ -14,9 +14,6 @@ var playerTwo = 'Player 2';
 
 // ------- FUNCTIONS ------- //
 
-playerOne = prompt('player 1, what is your name?')
-playerTwo = prompt('player 2, what is your name?')
-
 // controls the timer starting
 function myTimer() {
   gameIntervalTimer = setInterval(function() {
@@ -91,6 +88,8 @@ function boxClickHandler() {
 
 // randomize the board when start is clicked and begin the timer
 $('.start').on('click', function(){
+  playerOne = prompt('player 1, what is your name?')
+  playerTwo = prompt('player 2, what is your name?')
   shuffle(numbers)
   $.each( numbers, function( i, val ) {
     $(".gameboard div").eq(i).text(val);
